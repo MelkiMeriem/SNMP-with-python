@@ -5,7 +5,7 @@ def get_active_interfaces():
 
     g = nextCmd(
         SnmpEngine(),
-        CommunityData('com', mpModel=1),  # SNMPv2c
+        CommunityData('public', mpModel=1),  # SNMPv2c
         UdpTransportTarget(('localhost', 161), timeout=5, retries=2),
         ContextData(),
         ObjectType(ObjectIdentity('IF-MIB', 'ifInOctets')),

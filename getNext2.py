@@ -1,6 +1,6 @@
 from pysnmp.hlapi import *
 g = nextCmd(SnmpEngine()
-            , CommunityData('com', mpModel=1)
+            , CommunityData('public', mpModel=1)
             , UdpTransportTarget(('localhost', 161))
             , ContextData()
             , ObjectType(ObjectIdentity('SNMPv2-MIB', 'sysObjectID', 0)))

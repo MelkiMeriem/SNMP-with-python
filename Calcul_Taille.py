@@ -3,10 +3,10 @@ import time
 from datetime import datetime
 
 # Configuration SNMP
-COMMUNAUTE = 'com'
+COMMUNAUTE = 'public'
 HOTE = 'localhost'
 PORT = 161
-OID_OCTETS = '1.3.6.1.2.1.2.2.1.10.1'  # ifInOctets pour l'interface 1
+OID_OCTETS = '1.3.6.1.2.1.2.2.1.10.2'  # ifInOctets pour l'interface 1
 
 def obtenir_octets_reseau():
     """Récupère le nombre d'octets via SNMP"""

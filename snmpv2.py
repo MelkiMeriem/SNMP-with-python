@@ -5,7 +5,7 @@ data = (
     ObjectType(ObjectIdentity('.1.3.6.1.2.1.1.1.0')),
     #the last two arguments reffer to the same object (we identify it whether through hierarchy or through its OID)
 )
-g = getCmd(SnmpEngine(), CommunityData('com', mpModel=1)
+g = getCmd(SnmpEngine(), CommunityData('public', mpModel=1)
            , UdpTransportTarget(('localhost', 161))
            , ContextData() , *data)
 errorIndication, errorStatus, errorIndex, varBinds = next(g)

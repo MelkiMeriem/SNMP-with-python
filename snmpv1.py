@@ -11,7 +11,7 @@ data = (
 # Send the SNMP GET request
 g = getCmd(
     SnmpEngine(),
-    CommunityData('com', mpModel=0),
+    CommunityData('public', mpModel=0),
     UdpTransportTarget(('localhost', 161)),
     ContextData(),
     *data
